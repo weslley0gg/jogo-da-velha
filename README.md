@@ -5,12 +5,12 @@ Este projeto implementa o clássico **Jogo da Velha (Tic Tac Toe)** para dois jo
 
 ## Estrutura de Arquivos
 
-projeto/
-├── main.c        // Função principal e controle do jogo
-├── jogo.c        // Lógica do jogo (tabuleiro, jogadas, verificação)
-├── jogo.h        // Cabeçalho com as funções do jogo
-├── util.c        // Funções auxiliares (ex: limpar tela)
-├── util.h        // Cabeçalho das utilidades
+projeto/  
+├── main.c        // Função principal e controle do jogo  
+├── jogo.c        // Lógica do jogo (tabuleiro, jogadas, verificação)  
+├── jogo.h        // Cabeçalho com as funções do jogo  
+├── util.c        // Funções auxiliares (ex: limpar tela)  
+├── util.h        // Cabeçalho das utilidades  
 ├── README.txt    // Este documento
 
 ## Compilação
