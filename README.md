@@ -46,6 +46,6 @@ Desenvolvido como projeto para a disciplina de **Raciocínio Lógico e Algoritmo
 
 Equipe:  
 Luiz Fernando  
-Marília  
+Marília Gabriela  
 Iuri  
 Weslei Santana
