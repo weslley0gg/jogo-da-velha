@@ -17,13 +17,13 @@ projeto/
 
 Use o compilador `gcc` (ou compatível) no terminal para compilar o projeto:
 
-    gcc main.c jogo.c util.c -o jogo_da_velha
+    gcc main.c jogo.c util.c -o jogo-da-vellha
 
 ## Execução
 
 Após a compilação, execute o programa com:
 
-    ./jogo_da_velha
+    ./jogo-da-vellha
 
 ## Funcionalidades
 - Interface simples via terminal
