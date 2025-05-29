@@ -1,7 +1,9 @@
+// Implementação das funções relacionadas à lógica do jogo da velha
 #include <stdio.h>
 #include "jogo.h"
 #include "util.h"
 
+// Inicializa o tabuleiro com espaços em branco
 void inicializarTabuleiro(char tab[3][3]) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
@@ -10,6 +12,7 @@ void inicializarTabuleiro(char tab[3][3]) {
     }
 }
 
+// Mostra o tabuleiro no terminal
 void exibirTabuleiro(char tab[3][3]) {
     printf("\n");
     for (int i = 0; i < 3; i++) {
@@ -19,6 +22,7 @@ void exibirTabuleiro(char tab[3][3]) {
     printf("\n");
 }
 
+// Recebe a jogada do jogador e atualiza o tabuleiro
 void receberJogada(char tab[3][3], char jogador) {
     int linha, coluna;
     while (1) {
@@ -33,6 +37,7 @@ void receberJogada(char tab[3][3], char jogador) {
     }
 }
 
+// Verifica se o jogador venceu o jogo
 int verificarVitoria(char tab[3][3], char jogador) {
     for (int i = 0; i < 3; i++) {
         if (tab[i][0] == jogador && tab[i][1] == jogador && tab[i][2] == jogador) return 1;
