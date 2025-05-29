@@ -45,7 +45,7 @@ Após a compilação, execute o programa com:
 Desenvolvido como projeto para a disciplina de **Raciocínio Lógico e Algoritmos** - UNIAENE - Centro Universitário Adventista de Ensino do Nordeste
 
 Equipe:
-Luiz Fernando
-Marília
-Iuri
+Luiz Fernando  
+Marília  
+Iuri  
 Weslei Santana
