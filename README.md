@@ -28,11 +28,10 @@ Após a compilação, execute o programa com:
 ## Funcionalidades
 1. No **início**, solicita o nome dos dois jogadores (um para as peças **X** e outro para as peças **O**). 
 2. O tabuleiro é exibido após cada jogada, indicando a vez de cada jogador pelo nome escolhido. 
-3. Ao **final** de cada partida (vitória ou empate), exibe o resultado: 
-   - Se houver vencedor, mostra "Jogador <nome> (<X ou O>) venceu!" 
-   - Se der empate, mostra "Empate!" 
-4. Após exibir o resultado, o jogo **recomeça automaticamente**, iniciando uma nova partida. 
-   - É solicitada a tecla Enter para que o usuário possa ver o resultado antes de reiniciar. 
+3. Ao **final** de cada partida (vitória ou empate): 
+   - Exibe o tabuleiro final e a mensagem de resultado (“Jogador <nome> (X ou O) venceu!” ou “Empate!”). 
+   - Aguarda que o usuário pressione **Enter** antes de reiniciar o jogo, garantindo tempo para ler quem ganhou. 
+4. Após o usuário pressionar Enter, o jogo **recomeça automaticamente**, iniciando uma nova rodada. 
 
 ## Requisitos Atendidos
 ✔ Uso de vetor e matriz  
