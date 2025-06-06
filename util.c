@@ -1,8 +1,8 @@
-// Implementação de funções auxiliares
+// Fun��es auxiliares
 #include <stdio.h>
+#include <stdlib.h>
 #include "util.h"
 
-// Limpa a tela do terminal de forma compatível com Windows e Unix
 void limparTela() {
 #ifdef _WIN32
     system("cls");
