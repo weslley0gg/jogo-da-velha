@@ -26,12 +26,13 @@ Após a compilação, execute o programa com:
     ./jogo-da-velha
 
 ## Funcionalidades
-- Interface simples via terminal
-- Jogadores alternam entre 'X' e 'O'
-- Verificação de vitória em linhas, colunas e diagonais
-- Tratamento de entrada inválida
-- Exibição do tabuleiro a cada jogada
-- Empate após 9 jogadas sem vencedor
+1. No **início**, solicita o nome dos dois jogadores (um para as peças **X** e outro para as peças **O**). 
+2. O tabuleiro é exibido após cada jogada, indicando a vez de cada jogador pelo nome escolhido. 
+3. Ao **final** de cada partida (vitória ou empate), exibe o resultado: 
+   - Se houver vencedor, mostra "Jogador <nome> (<X ou O>) venceu!" 
+   - Se der empate, mostra "Empate!" 
+4. Após exibir o resultado, o jogo **recomeça automaticamente**, iniciando uma nova partida. 
+   - É solicitada a tecla Enter para que o usuário possa ver o resultado antes de reiniciar. 
 
 ## Requisitos Atendidos
 ✔ Uso de vetor e matriz  
