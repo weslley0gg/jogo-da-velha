@@ -6,7 +6,7 @@
 int main() {
     char nomeX[50], nomeO[50];
 
-    // 1) Pergunta o nome dos jogadores antes de come�ar a(s) partida(s)
+    // 1) Pergunta o nome dos jogadores antes de começar a(s) partida(s)
     printf("Digite o nome do jogador X: ");
     fgets(nomeX, sizeof(nomeX), stdin);
     nomeX[strcspn(nomeX, "\n")] = '\0';  // remove '\n' que o fgets captura
@@ -15,8 +15,7 @@ int main() {
     fgets(nomeO, sizeof(nomeO), stdin);
     nomeO[strcspn(nomeO, "\n")] = '\0';
 
-    // --- Loop externo:
-    // Toda vez que o jogo terminar (vit�ria ou empate), ele reinicia automaticamente.
+    // Loop externo: reinicia automaticamente ao final de cada partida
     while (1) {
         char tabuleiro[3][3];
         char jogadorAtual = 'X';
@@ -24,12 +23,12 @@ int main() {
 
         inicializarTabuleiro(tabuleiro);
 
-        // --- In�cio do loop interno da partida atual
+        // Loop interno da partida atual
         while (1) {
             limparTela();
             exibirTabuleiro(tabuleiro);
 
-            // Chama receberJogada passando o nome correto conforme jogador Atual
+            // Solicita jogada com base no jogador atual
             if (jogadorAtual == 'X') {
                 receberJogada(tabuleiro, jogadorAtual, nomeX);
             } else {
@@ -37,15 +36,25 @@ int main() {
             }
             jogadas++;
 
-            // Verifica vit�ria
+            // Verifica vitória
             if (verificarVitoria(tabuleiro, jogadorAtual)) {
                 limparTela();
                 exibirTabuleiro(tabuleiro);
+
                 if (jogadorAtual == 'X') {
                     printf("Jogador %s (X) venceu!\n", nomeX);
                 } else {
                     printf("Jogador %s (O) venceu!\n", nomeO);
                 }
+
+                // 1) Limpa o '\n' que ficou no buffer após o último scanf
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF) { /* descarta */ }
+
+                // 2) Aguarda o usuário pressionar Enter para reiniciar
+                printf("\nPressione Enter para iniciar um novo jogo...");
+                getchar();
+
                 break;
             }
 
@@ -54,6 +63,15 @@ int main() {
                 limparTela();
                 exibirTabuleiro(tabuleiro);
                 printf("Empate!\n");
+
+                // 1) Limpa o '\n' que ficou no buffer após o último scanf
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF) { /* descarta */ }
+
+                // 2) Aguarda o usuário pressionar Enter para reiniciar
+                printf("\nPressione Enter para iniciar um novo jogo...");
+                getchar();
+
                 break;
             }
 
@@ -61,14 +79,7 @@ int main() {
             jogadorAtual = (jogadorAtual == 'X') ? 'O' : 'X';
         }
         // --- Fim do loop interno (partida atual)
-
-        // Ap�s o t�rmino (vit�ria ou empate), reinicia automaticamente:
-        printf("\nIniciando novo jogo...\n");
-        printf("Pressione Enter para continuar...");
-        // Aguarda o usu�rio pressionar Enter antes de reiniciar a partida
-        getchar();  // consome o '\n' remanescente ou espera novo enter
-
-        // OBS.: o while(1) externo mant�m tudo reiniciando indefinidamente.
+        // Ao retornar aqui, já pressionaram Enter, então a próxima iteração limpa a tela.
     }
 
     return 0;
